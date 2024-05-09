@@ -8,12 +8,12 @@ export default {
     extend: {
       fontFamily:{
         lato: "'Lato', sans-serif"
-      }
+      },
+      colors:{
+        primary:'#f39c12'
+      },
     },
-    colors:{
-      primary:'#ffc001',
-      secondary:'#ff9c01',
-    }
+    
   },
   plugins: [
     require('daisyui'),

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     const pageLink = <>
@@ -7,7 +7,7 @@ const NavBar = () => {
                 isPending
                     ? "pending"
                     : isActive
-                        ? " font-bold text-orange-600 text-primary"
+                        ? " font-bold  text-primary"
                         : "hover:text-orange font-bold"
             }
             to={"/"}
@@ -21,7 +21,7 @@ const NavBar = () => {
                 isPending
                     ? "pending"
                     : isActive
-                        ? " font-bold text-orange-600 text-primary"
+                        ? " font-bold text-primary"
                         : "hover:text-orange font-bold"
             }
             to={"allFoods"}
@@ -35,7 +35,7 @@ const NavBar = () => {
                 isPending
                     ? "pending"
                     : isActive
-                        ? " font-bold text-orange-600 text-primary"
+                        ? " font-bold  text-primary"
                         : "hover:text-orange font-bold"
             }
             to={"gallery"}
@@ -46,7 +46,7 @@ const NavBar = () => {
         </NavLink>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 2xl:px-32">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -83,6 +83,8 @@ const NavBar = () => {
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
+                <Link to={'/login'}><button className="w-20 px-4 bg-primary text-white py-1 rounded-sm">Login</button></Link>
+
             </div>
         </div>
     );
