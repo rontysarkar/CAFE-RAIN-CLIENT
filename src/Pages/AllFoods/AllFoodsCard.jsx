@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-import noImage from '../../../assets/image/noImage.jpg'
-const TopFoodsCard = ({ food }) => {
+import noImage from '../../assets/image/noImage.jpg'
+
+const AllFoodsCard = ({ food }) => {
     return (
         <div className=" mx-auto lg:mx-0 w-[384px] rounded-2xl shadow-md dark:bg-gray-50   ">
             <img src={food.food_image ? food.food_image : noImage} alt="" className="object-cover object-center w-full rounded-2xl h-72 " />
@@ -11,6 +12,7 @@ const TopFoodsCard = ({ food }) => {
                         <div>
                             <h2 className="text-xl font-semibold tracking-wide">{food.food_name}</h2>
                             <p className=" text-primary">{food.food_category} </p>
+                            <p className=" text-primary">Quantity : {food.quantity} </p>
                         </div>
                         <div >
                             <p className='text-primary py-2'>{food.price}</p>
@@ -23,7 +25,8 @@ const TopFoodsCard = ({ food }) => {
     );
 };
 
-export default TopFoodsCard;
-TopFoodsCard.propTypes = {
+export default AllFoodsCard;
+
+AllFoodsCard.propTypes = {
     food: PropTypes.object
 }
