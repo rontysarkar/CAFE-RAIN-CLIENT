@@ -10,7 +10,8 @@ export default {
         lato: "'Lato', sans-serif"
       },
       colors:{
-        primary:'#f39c12'
+        primary:'#f39c12',
+        secondary:'rgb(255,189,47)'
       },
     },
     

@@ -49,7 +49,7 @@ const NavBar = () => {
         </NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 2xl:px-32">
+        <div className="navbar bg-base-100 2xl:px-32 lg:h-[64px] shadow-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,7 +79,7 @@ const NavBar = () => {
                                 />
                             </div>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 ">
                             <li>
                                 <a className="justify-between">
                                     Profile

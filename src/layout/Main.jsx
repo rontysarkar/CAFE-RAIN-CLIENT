@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const Main = () => {
     return (
-        <div>
+        <div className="font-lato bg-[#f4f1ea]">
 
             <NavBar />
 

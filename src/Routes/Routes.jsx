@@ -5,6 +5,7 @@ import AllFoods from "../Pages/AllFoods/AllFoods";
 import Gallery from "../Pages/Gallery/Gallery";
 import LogIn from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivetRoutes from "./PrivetRoutes";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/gallery',
-            element:<Gallery/>
+            element:<PrivetRoutes><Gallery/></PrivetRoutes>
         },
         {
             path:'/login',

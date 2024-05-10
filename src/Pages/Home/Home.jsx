@@ -1,10 +1,11 @@
-import Banner from "./Banner";
+import Banner from "./Banner/Banner";
+import TopFoods from "./TopFoods/TopFoods";
 
 const Home = () => {
     return (
         <div >
-            <h1 className="text-primary font-lato">Home</h1>
             <Banner/>
+            <TopFoods/>
         </div>
     );
 };
