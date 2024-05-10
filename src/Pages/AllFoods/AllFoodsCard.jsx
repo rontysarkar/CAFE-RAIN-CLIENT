@@ -16,7 +16,7 @@ const AllFoodsCard = ({ food }) => {
                         </div>
                         <div >
                             <p className='text-primary py-2'>{food.price}</p>
-                            <Link to={'/allFoods'}><button className=" px-2  bg-secondary  hover:bg-primary text-white rounded-sm">Details</button></Link>
+                            <Link to={`/singleFoods/${food._id}`}><button className=" px-2  bg-secondary  hover:bg-primary text-white rounded-sm">Details</button></Link>
                         </div>
                     </div>
                 </div>
