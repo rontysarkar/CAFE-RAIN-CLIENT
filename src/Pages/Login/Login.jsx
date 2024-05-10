@@ -24,7 +24,7 @@ const Login = () => {
 
                     {/* <img src="https://i.ibb.co/PTcVq8K/Career-in-Travel-and-Tourism.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" /> */}
                     <div className=" w-3/4  rounded-md xl:col-span-3 " >
-                        <Lottie animationData={login}  />
+                        <Lottie  animationData={login}  />
                     </div>
                     <div className="w-full px-6 py-12 rounded-md sm:px-12 md:px-16 xl:col-span-2  space-y-4" >
 

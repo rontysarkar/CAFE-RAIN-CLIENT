@@ -3,15 +3,18 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+console.log('vite env ',import.meta.env.VITE_keys)
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD3rOawRhFBo5GDx-zza-QgVjbGeu4amT0",
-  authDomain: "cafe-rain.firebaseapp.com",
-  projectId: "cafe-rain",
-  storageBucket: "cafe-rain.appspot.com",
-  messagingSenderId: "556753702851",
-  appId: "1:556753702851:web:032fd0738c8f524ba0f776"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId
+
+
+
 };
 
 // Initialize Firebase
