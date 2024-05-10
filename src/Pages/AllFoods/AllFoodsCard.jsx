@@ -4,7 +4,7 @@ import noImage from '../../assets/image/noImage.jpg'
 
 const AllFoodsCard = ({ food }) => {
     return (
-        <div className=" mx-auto lg:mx-0 w-[384px] rounded-2xl shadow-md dark:bg-gray-50   ">
+        <div className=" mx-auto lg:mx-0 w-[300px] rounded-2xl shadow-md dark:bg-gray-50   ">
             <img src={food.food_image ? food.food_image : noImage} alt="" className="object-cover object-center w-full rounded-2xl h-72 " />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">

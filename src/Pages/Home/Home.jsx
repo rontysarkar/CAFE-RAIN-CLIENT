@@ -3,7 +3,7 @@ import TopFoods from "./TopFoods/TopFoods";
 
 const Home = () => {
     return (
-        <div >
+        <div className="bg-[#f4f1ea]" >
             <Banner/>
             <TopFoods/>
         </div>
