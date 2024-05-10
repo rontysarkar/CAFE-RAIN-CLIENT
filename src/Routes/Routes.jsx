@@ -7,6 +7,7 @@ import LogIn from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivetRoutes from "./PrivetRoutes";
 import SingleFoods from "../Pages/SingleFoods/SingleFoods";
+import FoodPurchase from "../Pages/FoodPurchase/FoodPurchase";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         {
             path:'/singleFoods/:id',
             element:<SingleFoods/>,
+            loader:({params})=>fetch(`${import.meta.env.VITE_url}/foods/${params.id}`)
+        },
+        {
+            path:'/foodPurchase/:id',
+            element:<PrivetRoutes><FoodPurchase/></PrivetRoutes>,
             loader:({params})=>fetch(`${import.meta.env.VITE_url}/foods/${params.id}`)
         }
       ]

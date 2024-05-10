@@ -30,7 +30,7 @@ const SingleFoods = () => {
                                 {/* <h4 className='font-bold text-lg pl-2 text-[#1db2ff]'>{1200}</h4> */}
                             </div>
                             <div className="flex justify-between">
-                                <Link to={`/spot/${singleFoods._id}`} ><button className=" px-4 py-2 text-primary bg-transparent font-semibold  rounded-lg border border-primary hover:bg-primary hover:text-white ">Purchase</button></Link>
+                                <Link to={`/foodPurchase/${singleFoods._id}`} ><button className=" px-4 py-2 text-primary bg-transparent font-semibold  rounded-lg border border-primary hover:bg-primary hover:text-white ">Purchase</button></Link>
                                 <div>
                                     <h1 className='font-bold text-xl  text-primary'>{singleFoods?.price}</h1>
                                 </div>
