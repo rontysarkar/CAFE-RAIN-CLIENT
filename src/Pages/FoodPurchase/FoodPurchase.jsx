@@ -66,7 +66,7 @@ const FoodPurchase = () => {
 
             <div>
                 <label className="text-gray-700 dark:text-gray-200" >Quantity</label>
-                <input defaultValue={food.quantity} name="quantity" type="text" className="block w-full px-4 py-2 mt-2 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
+                <input placeholder="Quantity" name="quantity" type="text" className="block w-full px-4 py-2 mt-2 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
             </div>
 
             <div>

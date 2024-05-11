@@ -61,7 +61,10 @@ const NavBar = () => {
                         {pageLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Cafe Rain</a>
+                <div className="">
+                    
+                <a className="font-extrabold text-xl flex justify-center">CAFE <img className="w-7" src="logo.png" alt="" /> <span className="text-orange-500">RAIN</span></a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -80,14 +83,11 @@ const NavBar = () => {
                             </div>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 ">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li onClick={() => LogOut()}><a>Logout</a></li>
+                            
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myAddFood'}>My added food items</Link></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/addFood'}>Add a food item</Link></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myOrderedFood'}>My ordered food items</Link></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl" onClick={() => LogOut()}><a>Logout</a></li>
                         </ul>
                     </div> : <Link to={'/login'}><button className="w-20 px-4 bg-primary text-white py-1 rounded-sm">Login</button></Link>
                 }

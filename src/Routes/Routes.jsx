@@ -8,6 +8,9 @@ import Register from "../Pages/Register/Register";
 import PrivetRoutes from "./PrivetRoutes";
 import SingleFoods from "../Pages/SingleFoods/SingleFoods";
 import FoodPurchase from "../Pages/FoodPurchase/FoodPurchase";
+import MyAddFood from "../Pages/MyAddFood/MyAddFood";
+import AddFood from "../Pages/AddFood/AddFood";
+import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +46,19 @@ const router = createBrowserRouter([
             path:'/foodPurchase/:id',
             element:<PrivetRoutes><FoodPurchase/></PrivetRoutes>,
             loader:({params})=>fetch(`${import.meta.env.VITE_url}/foods/${params.id}`)
+        },
+        {
+            path:'/myAddFood',
+            element:<MyAddFood/>
+        },
+        {
+            path:'/addFood',
+            element:<AddFood/>
+
+        },
+        {
+            path:'/myOrderedFood',
+            element:<MyOrderedFood/>
         }
       ]
     },

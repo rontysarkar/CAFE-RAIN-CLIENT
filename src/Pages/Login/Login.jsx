@@ -82,7 +82,7 @@ const Login = () => {
                     <div className="w-full px-6 py-12 rounded-md sm:px-12 md:px-16 xl:col-span-2  space-y-4" >
 
                         <div className="flex justify-center mx-auto">
-                            <img className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" />
+                            <img className="w-24 h-24 " src="/logo.png" alt="" />
                         </div>
 
                         <form onSubmit={handleSubmit(onSubmit)} className="self-stretch space-y-4 ">
