@@ -41,9 +41,9 @@ const AllFoods = () => {
                 </div>
             </div>
             <div className="xl:px-56 py-24">
-                <form id='myForm' onSubmit={handleSearch} className='w-52 flex relative mx-auto lg:mx-0 '>
+                <form id='myForm' onSubmit={handleSearch} className='w-52 flex relative mx-auto lg:mx-0 border '>
                     <label className="input  flex items-center gap-2 ">
-                        <input type="text" name='name' className='grow py-2'  placeholder="Search..." />
+                        <input type="text" name='name' className='grow py-2 '  placeholder="Search..." />
                         
                     </label>
                     <input type="submit" value="Enter" className='py-2 px-4 bg-primary rounded-xl font-bold absolute right-0 bottom-1' />
