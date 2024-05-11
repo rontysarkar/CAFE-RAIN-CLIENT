@@ -8,6 +8,7 @@ import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { RiseLoader } from "react-spinners";
+import axios from "axios";
 
 
 const Register = () => {
@@ -44,6 +45,12 @@ const Register = () => {
 
         createAccount(data.email, data.password)
             .then((result) => {
+
+                axios.post(`${import.meta.env.VITE_url}/users`, data)
+                    .then(res => console.log(res.data))
+
+
+
                 setLoading(false)
                 userProfileUpdate(data.name, data.image)
                     .then(() => {
@@ -67,9 +74,16 @@ const Register = () => {
     const handleGoogle = () => {
         signInWithPop(googleProvider)
             .then(result => {
+                const user = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    image: result.user.photoURL
+                }
+                axios.post(`${import.meta.env.VITE_url}/users`, user)
+                    .then(res => console.log(res.data))
                 navigate('/')
                 setLoading(false)
-                console.log(result)
+                console.log(result.user)
             })
             .then(error => {
                 setLoading(false)
@@ -80,6 +94,13 @@ const Register = () => {
     const handleGithub = () => {
         signInWithPop(githubProvider)
             .then(result => {
+                const user = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    image: result.user.photoURL
+                }
+                axios.post(`${import.meta.env.VITE_url}/users`, user)
+                .then(res => console.log(res.data))
                 navigate('/')
                 setLoading(false)
                 console.log(result)

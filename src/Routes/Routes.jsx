@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         },
         {
             path:'/gallery',
-            element:<PrivetRoutes><Gallery/></PrivetRoutes>
+            element:<Gallery/>
         },
         {
             path:'/login',

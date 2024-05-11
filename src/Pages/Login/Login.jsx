@@ -45,7 +45,7 @@ const Login = () => {
                 setLoading(false)
                 Navigate(location.state || "/")
                 console.log(result)
-                toast.success('You have successfully registered.')
+                toast.success('You have successfully Login.')
             })
             .catch(error => {
                 setLoading(false)
@@ -60,7 +60,7 @@ const Login = () => {
                 Navigate(location.state || "/")
                 setLoading(false)
                 console.log(result)
-                toast.success('You have successfully registered.')
+                toast.success('You have successfully Login.')
             })
             .catch(error => {
                 setLoading(false)

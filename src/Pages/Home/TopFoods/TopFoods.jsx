@@ -4,7 +4,7 @@ import TopFoodsCard from "./TopFoodsCard";
 
 const TopFoods = () => {
     const foods = useFoodsItems()
-    console.log(foods)
+   
 
 
 
