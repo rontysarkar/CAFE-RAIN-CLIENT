@@ -11,6 +11,7 @@ import FoodPurchase from "../Pages/FoodPurchase/FoodPurchase";
 import MyAddFood from "../Pages/MyAddFood/MyAddFood";
 import AddFood from "../Pages/AddFood/AddFood";
 import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
+import Update from "../Pages/Update/Update";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
         {
             path:'/myOrderedFood',
             element:<MyOrderedFood/>
+        },
+        {
+            path:'/update/:id',
+            element:<Update/>,
+            loader:({params})=>fetch(`${import.meta.env.VITE_url}/foods/${params.id}`)
         }
       ]
     },
