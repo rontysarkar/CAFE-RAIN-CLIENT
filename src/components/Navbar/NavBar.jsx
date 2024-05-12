@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import personLogo from '../../assets/image/people.png'
+import logo from '../../../public/logo.png'
 
 const NavBar = () => {
     const { user, LogOut, loading } = useAuth()
@@ -63,7 +64,7 @@ const NavBar = () => {
                 </div>
                 <div className="">
                     
-                <a className="font-extrabold text-xl flex justify-center">CAFE <img className="w-7" src="logo.png" alt="" /> <span className="text-orange-500">RAIN</span></a>
+                <a className="font-extrabold text-xl flex justify-center">CAFE <img className="w-7" src={logo} alt="" /> <span className="text-orange-500">RAIN</span></a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -86,7 +87,7 @@ const NavBar = () => {
                             
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myAddFood'}>My added food items</Link></li>
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/addFood'}>Add a food item</Link></li>
-                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myOrderedFood'}>My ordered food items</Link></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myOrderedFood'}>My Ordered food items</Link></li>
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl" onClick={() => LogOut()}><a>Logout</a></li>
                         </ul>
                     </div> : <Link to={'/login'}><button className="w-20 px-4 bg-primary text-white py-1 rounded-sm">Login</button></Link>

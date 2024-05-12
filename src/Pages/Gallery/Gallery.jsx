@@ -71,7 +71,7 @@ const Gallery = () => {
             >
                 <div className="flex items-center justify-center w-full h-full bg-gray-900/40 ">
                     <div className="text-center">
-                        <h1 className="text-3xl font-extrabold text-white lg:text-7xl">Gallery</h1>
+                        <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl font-extrabold text-white lg:text-7xl">Gallery</h1>
                     </div>
                 </div>
             </div>

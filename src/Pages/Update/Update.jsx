@@ -3,6 +3,11 @@ import useAuth from "../../Hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useLoaderData, useNavigate } from "react-router-dom";
+
+
+
+
+
 const Update = () => {
     const {user} = useAuth()
     const foodData = useLoaderData()
@@ -33,7 +38,7 @@ const Update = () => {
    
     return (
         <section className="p-6    py-10  ">
-        <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12 shadow-2xl w-1/2 ">
+        <form data-aos="zoom-in" onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12 shadow-2xl w-1/2 ">
             <div className="  rounded-md shadow-sm     py-20  ">
                 <h1 className="text-center text-3xl font-bold  opacity-80">Update Your  food Item</h1>
                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 p-10 px-20 ">

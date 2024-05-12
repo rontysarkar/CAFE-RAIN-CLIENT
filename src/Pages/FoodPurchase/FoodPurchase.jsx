@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 const FoodPurchase = () => {
     const {user} = useAuth()
     const food = useLoaderData()
-    console.log(food)
     const newDate = new Date().toLocaleDateString('de-DE');
 
     const handlePurchase = e =>{
@@ -19,10 +18,12 @@ const FoodPurchase = () => {
         const buyer_name = form.buyerName.value;
         const buyer_Email  = form.buyerEmail.value;
         const quantity = form.quantity.value;
+        const food_owner = food.added_by.name;
+        const food_image = food.food_image
         const buying_date = new Date().toLocaleDateString("de-DE");
 
         const foodInfo = {
-            food_name,price,buyer_name,buyer_Email,quantity,buying_date
+            food_name,price,buyer_name,buyer_Email,quantity,buying_date,food_owner,food_image
         }
         
         axios.post(`${import.meta.env.VITE_url}/purchaseFoods`,foodInfo)
@@ -70,11 +71,11 @@ const FoodPurchase = () => {
             </div>
 
             <div>
-                <label className="text-gray-700 dark:text-gray-200" >Buyer Name</label>
+                <label className="text-gray-700 dark:text-gray-200" >Your Name</label>
                 <input defaultValue={user?.displayName} name="buyerName" type="text" readOnly className="block w-full px-4 py-2 mt-2 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
             </div>
             <div>
-                <label className="text-gray-700 dark:text-gray-200" >Buyer Email</label>
+                <label className="text-gray-700 dark:text-gray-200" >Your Email</label>
                 <input defaultValue={user?.email} name="buyerEmail" type="email" readOnly className="block w-full px-4 py-2 mt-2 dark:focus:border-blue-300 focus:outline-none focus:ring"/>
             </div>
             <div>
