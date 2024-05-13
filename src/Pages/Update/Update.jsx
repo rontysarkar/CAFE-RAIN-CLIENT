@@ -20,6 +20,7 @@ const Update = () => {
 
     const onSubmit = (data) =>{
         data.added_by = {name:user?.displayName,email:user?.email}
+        data.quantity = parseInt(data.quantity)
         console.log(data)
         axios.put(`${import.meta.env.VITE_url}/foods/${foodData._id}`,data)
         .then(res=>{

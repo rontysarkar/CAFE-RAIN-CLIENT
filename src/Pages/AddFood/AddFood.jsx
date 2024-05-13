@@ -11,7 +11,16 @@ const AddFood = () => {
 
 
     const onSubmit = (data) =>{
+        // const allData = {
+        //     food_name:data.food_name,
+        //     quantity
+
+        // }
+        console.log(data)
+        data.quantity = parseInt(data.quantity)
+        
         data.added_by = {name:user?.displayName,email:user?.email}
+        data.purchase_count = 0;
         console.log(data)
         axios.post(`${import.meta.env.VITE_url}/foods`,data)
         .then(res=>{

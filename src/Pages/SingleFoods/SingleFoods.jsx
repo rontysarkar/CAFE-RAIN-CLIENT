@@ -4,7 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const SingleFoods = () => {
     const singleFoods = useLoaderData()
-    console.log(singleFoods)
     return (
         <section className="p-4 lg:p-8 dark:bg-gray-100 ">
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
@@ -23,9 +22,11 @@ const SingleFoods = () => {
                                 <h1 data-aos='fade-up-right' data-aos-duration='100' className='py-2  flex items-center gap-1 font-medium text-xs lg:text-sm '><IoLocationOutline className="text-primary" />Food Origin : <span >{singleFoods?.food_origin}</span></h1>
 
                                 
-                                    <h1 className='  flex items-center gap-1 font-medium'><MdOutlineProductionQuantityLimits className="text-primary" />Quantity :{singleFoods.quantity}</h1>
+                                    <h1 className='  flex items-center gap-1 font-medium'><MdOutlineProductionQuantityLimits className="text-primary" />Available : <span className="text-primary">{singleFoods.quantity}</span>quantity</h1>
                                     <h1 className='font-medium flex items-center gap-1 '><MdPersonPin className="text-primary" />Name :{singleFoods?.added_by.name}</h1>
                                     <h4 className='font-semibold flex items-center gap-1   '><MdOutlineMailOutline className="text-primary" /><span>Email :{singleFoods?.added_by.email}</span></h4>
+                                    <h4 className='font-bold flex items-center gap-1   '>TOTAL PURCHASE :<span className="text-primary">{singleFoods?.purchase_count} </span>quantity</h4>
+
                                 
                                 {/* <h4 className='font-bold text-lg pl-2 text-[#1db2ff]'>{1200}</h4> */}
                             </div>

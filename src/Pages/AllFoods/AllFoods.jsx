@@ -6,7 +6,6 @@ import axios from 'axios';
 const AllFoods = () => {
     const [foods,setFoods] = useState([])
     const [searchValue,setSearchValue] = useState('')
-    // const foods = useFoodsItems()
 
     useEffect(()=>{
         axios.get(`${import.meta.env.VITE_url}/foods?food_name=${searchValue}`)

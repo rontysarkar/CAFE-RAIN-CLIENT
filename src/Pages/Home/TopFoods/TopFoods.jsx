@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import useFoodsItems from "../../../Hooks/useFoodsItems";
 import TopFoodsCard from "./TopFoodsCard";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const TopFoods = () => {
-    const foods = useFoodsItems()
+    const [foods,setFoods] = useState([])
+
+    useEffect(()=>{
+        axios.get(`${import.meta.env.VITE_url}/sortFoods`)
+        .then(res=>setFoods(res.data))
+    },[])
    
 
 
