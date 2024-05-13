@@ -94,8 +94,8 @@ const FoodPurchase = () => {
 
         <section className="p-4 lg:p-8 dark:bg-gray-100 ">
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
-                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row w-full h-[600px]  ">
-                    <div className="w-1/2">
+                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row w-full lg:h-[600px] gap-10 ">
+                    <div className="w-full flex justify-center ">
                     <Lottie className="size-10/12" animationData={foodAi} />
                     </div>
                     

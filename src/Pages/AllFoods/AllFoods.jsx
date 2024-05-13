@@ -8,7 +8,7 @@ const AllFoods = () => {
     const [searchValue,setSearchValue] = useState('')
 
     useEffect(()=>{
-        axios.get(`${import.meta.env.VITE_url}/foods?food_name=${searchValue}`)
+        axios.get(`${import.meta.env.VITE_url}/allFoods?food_name=${searchValue}`)
         .then(res=>setFoods(res.data))
     },[searchValue])
 

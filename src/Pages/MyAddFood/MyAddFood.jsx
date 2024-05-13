@@ -10,7 +10,7 @@ const MyAddFood = () => {
 
 
     useEffect(()=>{
-        axios.get(`${import.meta.env.VITE_url}/foods?name=${user?.displayName}&&email=${user?.email}`)
+        axios.get(`${import.meta.env.VITE_url}/foods?name=${user?.displayName}&&email=${user?.email}`,{withCredentials:true})
         .then(res=>setData(res.data))
     },[user])
 

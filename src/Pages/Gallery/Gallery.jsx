@@ -20,7 +20,7 @@ const Gallery = () => {
         axios.get(`${import.meta.env.VITE_url}/gallery`)
         .then(res=>{
             setGalleryItem(res.data)
-            console.log(res.data)
+            
         })
     },[fetchToggle])
 

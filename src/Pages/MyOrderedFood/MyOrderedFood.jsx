@@ -12,7 +12,7 @@ const MyOrderedFood = () => {
     
 
     useEffect(()=>{
-        axios.get(`${import.meta.env.VITE_url}/purchaseFoods?email=${user?.email}`)
+        axios.get(`${import.meta.env.VITE_url}/purchaseFoods?email=${user?.email}`,{withCredentials:true})
         .then(res=>setData(res.data))
     },[user])
 

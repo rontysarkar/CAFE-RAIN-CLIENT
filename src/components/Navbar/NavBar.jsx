@@ -2,9 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import personLogo from '../../assets/image/people.png'
 import logo from '../../../public/logo.png'
+import axios from "axios";
 
 const NavBar = () => {
     const { user, LogOut, loading } = useAuth()
+
+    
     const pageLink = <>
         <NavLink
             className={({ isActive, isPending }) =>
@@ -49,6 +52,12 @@ const NavBar = () => {
             </li>
         </NavLink>
     </>
+
+    const handleLogout = () =>{
+        LogOut()
+        axios.get(`${import.meta.env.VITE_url}/logout`,{withCredentials:true})
+        .then(res=>console.log(res.data))
+    }
     return (
         <div className="navbar bg-transparent 2xl:px-32 lg:h-[64px] shadow-xl">
             <div className="navbar-start">
@@ -88,7 +97,7 @@ const NavBar = () => {
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myAddFood'}>My added food items</Link></li>
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/addFood'}>Add a food item</Link></li>
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myOrderedFood'}>My Ordered food items</Link></li>
-                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl" onClick={() => LogOut()}><a>Logout</a></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl" onClick={handleLogout}><a>Logout</a></li>
                         </ul>
                     </div> : <Link to={'/login'}><button className="w-20 px-4 bg-primary text-white py-1 rounded-sm">Login</button></Link>
                 }

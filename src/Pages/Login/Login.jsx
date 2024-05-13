@@ -8,6 +8,7 @@ import useAuth from "../../Hooks/useAuth";
 import { RiseLoader } from "react-spinners";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 
 const Login = () => {
@@ -26,22 +27,30 @@ const Login = () => {
     const onSubmit = (data) => {
         console.log(data)
         logInUser(data.email, data.password)
-        .then(result => {
-            Navigate(location.state || "/")
-            setLoading(false)
-            console.log(result.user)
-            toast.success('You have successfully registered.')
-        })
-        .catch(error => {
-            setLoading(false)
-            console.error(error)
-            toast.error(error.message)
-        })
+            .then(result => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`, { email: result.user.email }, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
+                Navigate(location.state || "/")
+                setLoading(false)
+                console.log(result.user)
+                toast.success('You have successfully registered.')
+            })
+            .catch(error => {
+                setLoading(false)
+                console.error(error)
+                toast.error(error.message)
+            })
     }
 
     const handleGoogle = () => {
         signInWithPop(googleProvider)
             .then(result => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`, { email: result.user.email }, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
                 setLoading(false)
                 Navigate(location.state || "/")
                 console.log(result)
@@ -57,6 +66,11 @@ const Login = () => {
     const handleGithub = () => {
         signInWithPop(githubProvider)
             .then(result => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`, { email: result.user.email }, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
+
                 Navigate(location.state || "/")
                 setLoading(false)
                 console.log(result)
@@ -77,7 +91,7 @@ const Login = () => {
 
                     {/* <img src="https://i.ibb.co/PTcVq8K/Career-in-Travel-and-Tourism.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" /> */}
                     <div className=" w-3/4  rounded-md xl:col-span-3 " >
-                        <Lottie  animationData={login}  />
+                        <Lottie animationData={login} />
                     </div>
                     <div className="w-full px-6 py-12 rounded-md sm:px-12 md:px-16 xl:col-span-2  space-y-4" >
 

@@ -45,6 +45,10 @@ const Register = () => {
 
         createAccount(data.email, data.password)
             .then((result) => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`,{email:result.user.email},{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                })
 
                 axios.post(`${import.meta.env.VITE_url}/users`, data)
                     .then(res => console.log(res.data))
@@ -74,6 +78,10 @@ const Register = () => {
     const handleGoogle = () => {
         signInWithPop(googleProvider)
             .then(result => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`,{email:result.user.email},{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                })
                 const user = {
                     name: result.user.displayName,
                     email: result.user.email,
@@ -94,6 +102,10 @@ const Register = () => {
     const handleGithub = () => {
         signInWithPop(githubProvider)
             .then(result => {
+                axios.post(`${import.meta.env.VITE_url}/jwt`,{email:result.user.email},{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                })
                 const user = {
                     name: result.user.displayName,
                     email: result.user.email,
