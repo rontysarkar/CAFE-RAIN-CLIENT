@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const MyAddFood = () => {
     const {user} = useAuth()
@@ -16,7 +17,7 @@ const MyAddFood = () => {
 
     return (
         <div className="overflow-x-auto xl:mx-10  my-10  ">
-            
+            <Helmet><title>CafeRain | MyFoods</title></Helmet>
             <table className="table  ">
                 {/* head */}
                 <thead>

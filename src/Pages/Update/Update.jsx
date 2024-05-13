@@ -3,6 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -39,6 +40,7 @@ const Update = () => {
    
     return (
         <section className="p-6    py-10  ">
+            <Helmet><title>CafeRain | Update</title></Helmet>
         <form data-aos="zoom-in" onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12 shadow-2xl w-1/2 ">
             <div className="  rounded-md shadow-sm     py-20  ">
                 <h1 className="text-center text-3xl font-bold  opacity-80">Update Your  food Item</h1>

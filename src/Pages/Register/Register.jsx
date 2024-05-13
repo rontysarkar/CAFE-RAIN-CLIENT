@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { RiseLoader } from "react-spinners";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -125,6 +126,7 @@ const Register = () => {
 
     return (
         <div className="grid items-center min-h-[calc(100vh-200px)]">
+            <Helmet><title>CafeRain | Register</title></Helmet>
             {loading && <div className="absolute inset-0  h-screen max-w-[1920px] flex justify-center items-center p-5 "><RiseLoader size={40} color="#f39c12" /></div>}
             <section className="p-6   mt-10  ">
                 <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5 ">

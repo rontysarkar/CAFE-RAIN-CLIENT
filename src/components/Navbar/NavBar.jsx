@@ -54,9 +54,10 @@ const NavBar = () => {
     </>
 
     const handleLogout = () =>{
-        LogOut()
         axios.get(`${import.meta.env.VITE_url}/logout`,{withCredentials:true})
         .then(res=>console.log(res.data))
+        LogOut()
+        
     }
     return (
         <div className="navbar bg-transparent 2xl:px-32 lg:h-[64px] shadow-xl">

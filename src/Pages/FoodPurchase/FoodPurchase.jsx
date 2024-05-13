@@ -4,6 +4,7 @@ import foodAi from '../../assets/foodAi.json'
 import Lottie from "lottie-react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const FoodPurchase = () => {
     const navigate = useNavigate()
@@ -93,6 +94,7 @@ const FoodPurchase = () => {
     return (
 
         <section className="p-4 lg:p-8 dark:bg-gray-100 ">
+            <Helmet><title>CafeRain | purchase</title></Helmet>
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
                 <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row w-full lg:h-[600px] gap-10 ">
                     <div className="w-full flex justify-center ">

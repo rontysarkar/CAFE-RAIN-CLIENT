@@ -9,6 +9,7 @@ import { RiseLoader } from "react-spinners";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -84,6 +85,7 @@ const Login = () => {
     }
     return (
         <div className="grid items-center min-h-[calc(100vh-200px)]">
+            <Helmet><title>CafeRain | Login</title></Helmet>
             {loading && <div className="absolute inset-0  h-screen max-w-[1920px] flex justify-center items-center p-5 "><RiseLoader size={40} color="#f39c12" /></div>}
 
             <section className="p-6  mt-10  ">

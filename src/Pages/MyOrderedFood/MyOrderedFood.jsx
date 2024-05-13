@@ -4,6 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyOrderedFood = () => {
     const [data,setData] = useState()
@@ -60,7 +61,7 @@ const MyOrderedFood = () => {
 
     return (
         <div className="overflow-x-auto xl:mx-10  my-10  ">
-            
+            <Helmet><title>CafeRain | Ordered</title></Helmet>
             <table className="table  ">
                 {/* head */}
                 <thead>

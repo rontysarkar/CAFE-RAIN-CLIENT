@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import allFoods from '../../assets/image/foods1.jpg'
 import AllFoodsCard from './AllFoodsCard';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
 
 const AllFoods = () => {
     const [foods,setFoods] = useState([])
@@ -26,6 +27,7 @@ const AllFoods = () => {
 
     return (
         <div>
+            <Helmet><title>CafeRain | Foods</title></Helmet>
             <div className={` w-full bg-center bg-cover h-[32rem] bg-no-repeat `}
                 style={
                     {

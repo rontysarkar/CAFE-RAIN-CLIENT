@@ -5,6 +5,7 @@ import GalleryCard from './GalleryCard';
 import useAuth from '../../Hooks/useAuth';
 import {  useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -62,6 +63,7 @@ const Gallery = () => {
     }
     return (
         <div className='bg-[#f4f1ea]'>
+            <Helmet><title>CafeRain | Gallery</title></Helmet>
             <div className={` w-full bg-center bg-cover h-[32rem] bg-no-repeat mb-10 `}
                 style={
                     {

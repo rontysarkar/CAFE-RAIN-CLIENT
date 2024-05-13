@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMailOutline, MdOutlineProductionQuantityLimits, MdPersonPin } from "react-icons/md";
 import { Link, useLoaderData } from "react-router-dom";
@@ -6,6 +7,7 @@ const SingleFoods = () => {
     const singleFoods = useLoaderData()
     return (
         <section className="p-4 lg:p-8 dark:bg-gray-100 ">
+            <Helmet><title>CafeRain | Details</title></Helmet>
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
                 <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row h-[600px] ">
                     <div className="w-8/12">
