@@ -27,7 +27,7 @@ const SingleFoods = () => {
                                     <h1 className='  flex items-center gap-1 font-medium'><MdOutlineProductionQuantityLimits className="text-primary" />Available : <span className="text-primary">{singleFoods.quantity}</span>quantity</h1>
                                     <h1 className='font-medium flex items-center gap-1 '><MdPersonPin className="text-primary" />Name :{singleFoods?.added_by.name}</h1>
                                     <h4 className='font-semibold flex items-center gap-1   '><MdOutlineMailOutline className="text-primary" /><span>Email :{singleFoods?.added_by.email}</span></h4>
-                                    <h4 className='font-bold flex items-center gap-1   '>TOTAL PURCHASE :<span className="text-primary">{singleFoods?.purchase_count} </span>quantity</h4>
+                                    <h4 className='font-bold flex items-center gap-1   '>TOTAL PURCHASE :<span className="text-primary">{singleFoods?.purchase_count} </span></h4>
 
                                 
                                 {/* <h4 className='font-bold text-lg pl-2 text-[#1db2ff]'>{1200}</h4> */}
