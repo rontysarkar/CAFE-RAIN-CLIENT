@@ -20,8 +20,8 @@ const OurClient = () => {
                 }
             >
                 <div className="">
-                    <div className='py-16 '>
-                    <h1 className='text-white text-center text-5xl font-semibold  '>CLIENTS ABOUT US</h1>
+                    <div className='py-4 lg:py-16 '>
+                    <h1 className='text-white text-center text-2xl lg:text-5xl font-semibold  '>CLIENTS ABOUT US</h1>
                     <p className='font-bold opacity-70 text-white text-center'>Testimonials</p>
                     </div>
                     <Swiper
@@ -54,7 +54,7 @@ const OurClient = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='w-1/2 mx-auto text-white font-bold  '>
-                                <h1 className='text-center'>I stumbled upon [Restaurant Name] while exploring the neighborhood, and Im so glad I did! Their diverse menu impressed me, and the quality of ingredients shines through in every dish. Whether youre a meat lover or prefer plant-based options, this place has you covered. Cant wait to come back!</h1>
+                                <h1 className='text-center'>I stumbled upon CAFE RAIN while exploring the neighborhood, and Im so glad I did! Their diverse menu impressed me, and the quality of ingredients shines through in every dish. Whether youre a meat lover or prefer plant-based options, this place has you covered. Cant wait to come back!</h1>
                                 <div className='flex justify-center my-10'>
                                 <div className="avatar flex flex-col justify-center items-center gap-4">
                                     <div className="w-16  rounded-full  ring-offset-base-100 ring-offset-2">
@@ -67,7 +67,7 @@ const OurClient = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='w-1/2 mx-auto text-white font-bold  '>
-                                <h1 className='text-center'>I recently celebrated my birthday at [Restaurant Name], and it was a memorable experience! The staff went above and beyond to ensure everything was perfect, and the food was absolutely delicious. Whether youre looking for a casual dinner or a special occasion, this place always delivers excellenc</h1>
+                                <h1 className='text-center'>I recently celebrated my birthday at CAFE RAIN, and it was a memorable experience! The staff went above and beyond to ensure everything was perfect, and the food was absolutely delicious. Whether youre looking for a casual dinner or a special occasion, this place always delivers excellenc</h1>
                                 <div className='flex justify-center my-10'>
                                 <div className="avatar flex flex-col justify-center items-center gap-4">
                                     <div className="w-16  rounded-full  ring-offset-base-100 ring-offset-2">
@@ -80,7 +80,7 @@ const OurClient = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='w-1/2 mx-auto text-white font-bold  '>
-                                <h1 className='text-center'>My friends and I had a fantastic dining experience at [Restaurant Name]. The ambiance is trendy yet inviting, and the service is top-notch. We sampled a variety of dishes, from their creative vegetarian options to their indulgent meat platters, and each one exceeded our expectations. Highly recommend</h1>
+                                <h1 className='text-center'>My friends and I had a fantastic dining experience at CAFE RAIN. The ambiance is trendy yet inviting, and the service is top-notch. We sampled a variety of dishes, from their creative vegetarian options to their indulgent meat platters, and each one exceeded our expectations. Highly recommend</h1>
                                 <div className='flex justify-center my-10'>
                                 <div className="avatar flex flex-col justify-center items-center gap-4">
                                     <div className="w-16  rounded-full  ring-offset-base-100 ring-offset-2">
