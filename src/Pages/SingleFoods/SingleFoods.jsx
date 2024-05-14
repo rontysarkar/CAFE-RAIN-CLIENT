@@ -11,7 +11,7 @@ const SingleFoods = () => {
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
                 <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row h-[600px] ">
                     <div className="w-8/12">
-                        <img src={singleFoods?.food_image} alt="" className=" " />
+                        <img src={singleFoods?.food_image} alt="" className=" object-cover" />
                     </div>
                     <div data-aos="zoom-in-up" data-aos-duration='1000' className="  xl:w-1/2 mx-auto rounded-lg  grid items-center ">
 

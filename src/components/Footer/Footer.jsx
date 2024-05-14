@@ -1,4 +1,4 @@
-
+import logo from '../../../public/logo.png'
 const Footer = () => {
     return (
         <footer className="bg-white dark:bg-gray-900">
@@ -7,10 +7,10 @@ const Footer = () => {
                     <div className="w-full -mx-6 lg:w-2/5">
                         <div className="px-6">
                             <a href="#">
-                                <img src="" alt="" />
+                                <img className='w-24' src={logo} alt="" />
                             </a>
 
-                            <p className="max-w-sm mt-2 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
+                            <p className="max-w-sm mt-2 text-gray-500 dark:text-gray-400"></p>
 
                             <div className="flex mt-6 -mx-2">
                                 <a href="#"
@@ -50,29 +50,27 @@ const Footer = () => {
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                             <div>
                                 <h3 className="text-gray-700 uppercase dark:text-white">About</h3>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Company</a>
+                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Restaurant </a>
                                 <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">community</a>
                                 <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Careers</a>
                             </div>
 
                             <div>
                                 <h3 className="text-gray-700 uppercase dark:text-white">Blog</h3>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Music</a>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
+                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Link to the restaurants blog where customers can find articles, recipes, news, and updates related to the restaurant, food industry, cooking tips, etc</a>
                             </div>
 
                             <div>
                                 <h3 className="text-gray-700 uppercase dark:text-white">Products</h3>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
+                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Operating Hours</a>
+                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Monday to Thursday: [9:00AM] - [10:00PM]</a>
+                                <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Friday to Saturday: [10:00AM] - [12:00PM]</a>
                             </div>
 
                             <div>
                                 <h3 className="text-gray-700 uppercase dark:text-white">Contact</h3>
                                 <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
-                                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
+                                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">ronty@gmail.com</span>
                             </div>
                         </div>
                     </div>

@@ -40,7 +40,7 @@ const AllFoods = () => {
                         <h1 data-aos="zoom-in" data-aos-duration="1000" className="text-3xl font-extrabold text-white lg:text-7xl"> All Popular Foods Items</h1>
                     </div>
                 </div>
-            </div>
+           </div>
             <div className="xl:px-56 py-24">
                 <form id='myForm' onSubmit={handleSearch} className='w-52 flex relative mx-auto lg:mx-0 border '>
                     <label className="input  flex items-center gap-2 ">
