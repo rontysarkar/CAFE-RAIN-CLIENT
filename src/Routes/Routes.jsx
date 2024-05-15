@@ -52,16 +52,16 @@ const router = createBrowserRouter([
         },
         {
             path:'/myAddFood',
-            element:<MyAddFood/>
+            element:<PrivetRoutes><MyAddFood/></PrivetRoutes>
         },
         {
             path:'/addFood',
-            element:<AddFood/>
+            element:<PrivetRoutes><AddFood/></PrivetRoutes>
 
         },
         {
             path:'/myOrderedFood',
-            element:<MyOrderedFood/>
+            element:<PrivetRoutes><MyOrderedFood/></PrivetRoutes>
         },
         {
             path:'/update/:id',

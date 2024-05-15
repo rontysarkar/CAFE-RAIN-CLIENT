@@ -149,7 +149,7 @@ const Register = () => {
 
                                 </label>
 
-                                <input {...register("name")} type="text" placeholder="Enter Your Name" className="w-full rounded-md focus:ring focus:dark:ring-violet-600 dark:border-gray-300 h-14 px-4 border" />
+                                <input {...register("name")} type="text" placeholder="Enter Your Name" required className="w-full rounded-md focus:ring focus:dark:ring-violet-600 dark:border-gray-300 h-14 px-4 border" />
                             </div>
                             <div>
                                 <label className="label">
