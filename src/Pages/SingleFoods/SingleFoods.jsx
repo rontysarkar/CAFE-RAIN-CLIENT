@@ -9,9 +9,9 @@ const SingleFoods = () => {
         <section className="p-4 lg:p-8 dark:bg-gray-100 ">
             <Helmet><title>CafeRain | Details</title></Helmet>
             <div className="container mx-auto space-y-12 min-h-[calc(100vh-277px)] flex items-center justify-center ">
-                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row h-[600px] ">
-                    <div className="w-8/12">
-                        <img src={singleFoods?.food_image} alt="" className=" object-cover" />
+                <div className="flex flex-col  rounded-md shadow-sm lg:flex-row  ">
+                    <div className="lg:w-8/12 h-[600px]">
+                        <img src={singleFoods?.food_image} alt="" className=" object-cover h-full w-full" />
                     </div>
                     <div data-aos="zoom-in-up" data-aos-duration='1000' className="  xl:w-1/2 mx-auto rounded-lg  grid items-center ">
 
