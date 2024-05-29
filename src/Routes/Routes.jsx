@@ -13,6 +13,9 @@ import AddFood from "../Pages/AddFood/AddFood";
 import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
 import Update from "../Pages/Update/Update";
 import ErrorPage from "../Pages/ErrorPage";
+import Dashboard from "../layout/Dashboard";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import AllFoodItems from "../Pages/Dashboard/AllFoodItems/AllFoodItems";
 
 const router = createBrowserRouter([
     {
@@ -50,15 +53,8 @@ const router = createBrowserRouter([
             element:<PrivetRoutes><FoodPurchase/></PrivetRoutes>,
             loader:({params})=>fetch(`${import.meta.env.VITE_url}/foods/${params.id}`)
         },
-        {
-            path:'/myAddFood',
-            element:<PrivetRoutes><MyAddFood/></PrivetRoutes>
-        },
-        {
-            path:'/addFood',
-            element:<PrivetRoutes><AddFood/></PrivetRoutes>
-
-        },
+        
+        
         {
             path:'/myOrderedFood',
             element:<PrivetRoutes><MyOrderedFood/></PrivetRoutes>
@@ -70,6 +66,32 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+        path:'dashboard',
+        element:<Dashboard/>,
+        children:[
+            {
+                path:'allFoodItems',
+                element:<AllFoodItems/>
+            },
+            {
+                path:'allUsers',
+                element:<AllUsers/>
+            },
+            {
+                path:'dashboard',
+                element:<div>hello</div>
+            },
+            {
+                path:'addFood',
+                element:<PrivetRoutes><AddFood/></PrivetRoutes>
+            },
+            {
+                path:'myAddedFood',
+                element:<PrivetRoutes><MyAddFood/></PrivetRoutes>
+            }
+        ]
+    }
   ]);
 
   export default router;

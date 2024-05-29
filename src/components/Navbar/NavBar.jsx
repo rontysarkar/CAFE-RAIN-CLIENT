@@ -95,8 +95,9 @@ const NavBar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 ">
                             
-                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myAddFood'}>My added food items</Link></li>
-                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/addFood'}>Add a food item</Link></li>
+                            <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/dashboard'}>Dashboard</Link></li>
+                            {/* <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myAddFood'}>My added food items</Link></li> */}
+                            {/* <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/addFood'}>Add a food item</Link></li> */}
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl"><Link to={'/myOrderedFood'}>My Ordered food items</Link></li>
                             <li className="font-bold hover:bg-primary hover:text-white hover:rounded-3xl" onClick={handleLogout}><a>Logout</a></li>
                         </ul>

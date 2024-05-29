@@ -19,7 +19,6 @@ const Login = () => {
     const [toggleEye, setToggleEye] = useState(false)
     const location = useLocation()
     const Navigate = useNavigate()
-    console.log(location.state)
 
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider();
